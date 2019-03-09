@@ -1,11 +1,15 @@
 package pl.alx.debt.model;
 
 
+import lombok.Getter;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
+
 public class Debt {
 
 
@@ -16,18 +20,43 @@ public class Debt {
 
     private LocalDateTime createdAt;
 
-    private BigDecimal ammount;
+    private BigDecimal amount;
 
     private boolean paidOff;
 
 
     @ManyToOne
-    @JoinColumn(name= "lander_id")
+    @JoinColumn(name= "lender_id")
     private User lender ;
 
 
     @ManyToOne
-    @JoinColumn(name= "deptor_id")
+    @JoinColumn(name= "debtor_id")
     private Debtor debtor;
+
+
+    public Debt(User lender, Debtor debtor, BigDecimal amount){
+        this.lender=lender;
+        this.debtor=debtor;
+        this.amount=amount;
+        this.createdAt=LocalDateTime.now();
+        this.paidOff=false;
+    }
+
+
+
+
+    public String getLenderName(){
+        return lender.getFirstName()+ " " + lender.getLastName();
+
+    }
+
+    public String getDepterName(){
+        return debtor.getFirstName()+ " " + debtor.getLastName();
+
+    }
+
+
+
 
 }

@@ -17,6 +17,15 @@
             <a class="navbar-brand" href="<c:url value="/"/>"><span class="glyphicon glyphicon-home"></span></a>
         </div>
 
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="<c:url value="/debts"/>">Debts</a></li>
+                <li>
+                    <a href="<c:url value="/debts/create"/>">New Debt <span class="glyphicon glyphicon-plus"></span></a>
+                </li>
+            </ul>
+        </div>
+
 
     </div>
 </nav>

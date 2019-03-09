@@ -1,10 +1,13 @@
 package pl.alx.debt.model;
 
 
+import lombok.Getter;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
+@Getter
 public class User {
 
 
@@ -24,4 +27,7 @@ public class User {
     @Column(length = 45,nullable = false)
     private String lastName;
 
+    public User(int id) {
+
+    }
 }

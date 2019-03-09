@@ -1,11 +1,13 @@
 package pl.alx.debt.model;
 
 
+import lombok.Getter;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "debtor")
-
+@Getter
 public class Debtor {
 
     @Id
