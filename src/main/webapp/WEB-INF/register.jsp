@@ -30,13 +30,13 @@
 
         <!-- Login Form -->
         <form action="/register" method="post">
-                <input type="text" id="login" class="fadeIn second" name="firstName" placeholder="First name">
+                <input type="text" id="login" class="fadeIn second" name="firstName" required placeholder="First name">
             <p></p>
-            <input type="text" id="password" class="fadeIn third" name="LastName" placeholder="Last Name">
+            <input type="text" id="password" class="fadeIn third" name="LastName" required placeholder="Last Name">
             <p></p>
-            <input type="text" id="email" class="fadeIn third" name="email" placeholder="Email">
+            <input type="text" id="email" class="fadeIn third" name="email" required placeholder="Email">
             <p></p>
-            <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+            <input type="password" id="password" class="fadeIn third" name="password" required placeholder="Password">
             <p></p>
             <button onsubmit="this">Register</button>
 

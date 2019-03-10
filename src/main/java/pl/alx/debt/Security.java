@@ -31,7 +31,10 @@ public class Security extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().mvcMatchers("/register").permitAll().anyRequest().authenticated().and()
+        http.authorizeRequests().mvcMatchers("/register").permitAll()
+                .mvcMatchers("/users").hasRole("ADMIN")
+
+                .anyRequest().authenticated().and()
                 .formLogin()
                 .permitAll()
                 .loginPage("/login")
