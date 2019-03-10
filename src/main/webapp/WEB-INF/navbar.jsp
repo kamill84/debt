@@ -23,6 +23,8 @@
                 <li>
                     <a href="<c:url value="/debts/create"/>">New Debt <span class="glyphicon glyphicon-plus"></span></a>
                 </li>
+
+
             </ul>
         </div>
 

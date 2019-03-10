@@ -29,12 +29,14 @@
         </div>
 
         <!-- Login Form -->
-        <form>
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+        <form action="/login-process" method="post">
+                <input type="text" id="login" class="fadeIn second" name="email" placeholder="login">
             <p></p>
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
             <p></p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Log In</a></p>
+
+            <button type="submit">Log In</button>
+
                        <p></p>
             <p><a class="btn btn-primary btn-lg" href="/register" role="button">Register</a></p>
 

@@ -2,12 +2,14 @@ package pl.alx.debt.model;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
 @Getter
+@NoArgsConstructor
 public class User {
 
 
